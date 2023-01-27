@@ -1,6 +1,6 @@
 package MyArrayList;
 
-public class Test {
+public class ArrayListTest {
     public static void main(String[] args) {
         MyArrayList<String> myArrayList = new MyArrayList();
 
@@ -22,10 +22,12 @@ public class Test {
 
         myArrayList.clear();
 
-        myArrayList.add("hello");
+        myArrayList.add("M1 Abrams");
 
         System.out.println("myArrayList.get(0) = " + myArrayList.get(0));
         System.out.println("myArrayList.get(1) = " + myArrayList.get(9));
+
+        System.out.println("myArrayList.size() = " + myArrayList.size());
     }
 
 }
