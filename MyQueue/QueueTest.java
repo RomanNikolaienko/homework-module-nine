@@ -11,11 +11,7 @@ public class QueueTest {
         myQueue.add("Six");
         myQueue.add("Seven");
         System.out.println("myQueue.peek() = " + myQueue.peek());
-
         System.out.println("myQueue.size() = " + myQueue.size());
-        System.out.println("myQueue.peek() = " + myQueue.peek());
-        System.out.println("myQueue.size() = " + myQueue.size());
-        System.out.println("myQueue.poll() = " + myQueue.poll());
         System.out.println("myQueue.poll() = " + myQueue.poll());
         System.out.println("myQueue.poll() = " + myQueue.poll());
         System.out.println("myQueue.poll() = " + myQueue.poll());

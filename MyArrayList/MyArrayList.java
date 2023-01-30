@@ -1,39 +1,41 @@
 package MyArrayList;
 
 public class MyArrayList<E> {
-    private Object[] elementData = new Object[10];
-    private int index = 0;
+    private Object[] array = new Object[0];
+    private int size = 0;
 
-    public void add(E e){
-        elementData[index] = e;
-        index++;
-        if (index == elementData.length){
-            Object[] newElementData = new Object[elementData.length * 2];
-            for (int i = 0; i < elementData.length; i++) {
-                newElementData[i] = elementData[i];
+    public void add(E e) {
+        Object[] newArray = new Object[array.length + 1];
+        if (size == array.length) {
+            for (int i = 0; i < array.length; i++) {
+                newArray[i] = array[i];
             }
-            elementData = newElementData;
-            }
-    }
-
-    public void remove(int index){
-        for (int i = index; i < elementData.length - 1; i++) {
-            elementData[i] = elementData[i+1];
+            array = newArray;
         }
-        this.index--;
+        array[size] = e;
+        size++;
     }
 
-    public void clear(){
-        this.elementData = new Object[10];
-        this.index = 0;
+    public void remove(int index) {
+        Object[] newArray = new Object[array.length - 1];
+        for (int i = index; i < array.length - 1; i++) {
+            newArray[i] = array[i + 1];
+        }
+        array = newArray;
+        size--;
     }
 
-    public E get(int index){
-        return (E) elementData[index];
+    public void clear() {
+        array = new Object[0];
+        size = 0;
     }
 
-    public int size(){
-        return index;
+    public Object get(int index) {
+        return array[index];
+    }
+
+    public int size() {
+        return size;
     }
 
 }
