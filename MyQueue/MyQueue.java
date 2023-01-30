@@ -1,7 +1,5 @@
 package MyQueue;
 
-import java.util.Arrays;
-
 public class MyQueue<E> {
     private Object[] queueArray = new Object[5];
     private int size;
