@@ -8,7 +8,7 @@ public class ArrayListTest {
             myArrayList.add("Leopard 2 " + j);
         }
 
-        myArrayList.remove(0);
+        myArrayList.remove(5);
 
         for (int i = 0; i < myArrayList.size(); i++) {
             System.out.println(myArrayList.get(i));

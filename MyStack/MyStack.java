@@ -1,5 +1,7 @@
 package MyStack;
 
+import java.util.Objects;
+
 public class MyStack<E> {
     private Object[] stackArray = new Object[1];
     private int size;
@@ -43,6 +45,7 @@ public class MyStack<E> {
     }
 
     public void remove(int index){
+        Objects.checkIndex(index, size);
         int s = stackArray.length;
         Object[] newArray = new Object[stackArray.length-1];
         for (int i = 0; i < stackArray.length-1; i++) {

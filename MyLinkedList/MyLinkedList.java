@@ -50,6 +50,7 @@ public class MyLinkedList<E> {
     }
 
     private Node<E> getNodeByIndex(int index){
+        Objects.checkIndex(index, size);
         Node<E> tempNode = head;
         for (int i = 0; i < index; i++) {
             tempNode = tempNode.next;
